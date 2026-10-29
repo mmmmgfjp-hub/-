@@ -33,7 +33,6 @@ export interface PaymentRow {
 }
 
 export function serializePayment(row: PaymentRow) {
-  const settingsPriceDays = 0;
   return {
     id: row.id,
     amountCents: row.amount_cents,
