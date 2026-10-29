@@ -1,0 +1,120 @@
+.topbar-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 12px;
+  min-width: 210px;
+  padding: 8px;
+  border-radius: 14px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 50;
+}
+
+.topbar-menu a,
+.topbar-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 11px;
+  border-radius: 9px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-align: start;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topbar-menu a:hover,
+.topbar-menu button:hover {
+  background: rgba(201, 162, 39, 0.1);
+  text-decoration: none;
+}
+
+.topbar-menu .menu-mail {
+  padding: 6px 11px 8px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  word-break: break-all;
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 4px;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  padding: 7px 11px;
+  border-radius: 9px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--gold-soft);
+  background: rgba(201, 162, 39, 0.08);
+  text-decoration: none;
+}
+
+.nav-links a.is-active {
+  color: var(--gold-soft);
+  background: rgba(201, 162, 39, 0.12);
+}
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 40;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  background: rgba(10, 11, 14, 0.94);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line-soft);
+  padding: 6px 6px calc(6px + env(safe-area-inset-bottom));
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 7px 4px;
+  border-radius: 10px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.bottom-nav a.is-active {
+  color: var(--gold-soft);
+  background: rgba(201, 162, 39, 0.09);
+}
+
+.bottom-nav .nav-glyph {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+@media (min-width: 860px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+}
