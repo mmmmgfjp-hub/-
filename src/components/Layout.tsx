@@ -26,7 +26,6 @@ export function Logo({ size = 42 }: { size?: number }) {
         {/* stylised Yemeni mihrab arch framing a rising market line */}
         <path
           d="M16 3.2c5.2 3.1 8.4 7.3 8.4 12.4 0 5.4-3.8 9.2-8.4 13.2-4.6-4-8.4-7.8-8.4-13.2C7.6 10.5 10.8 6.3 16 3.2z"
-          none-=""
           fill="none"
           stroke="url(#iay-gold)"
           strokeWidth="1.8"
