@@ -110,7 +110,7 @@ export function buildRateLimiters(disabled = false) {
       limit: 20,
       standardHeaders: 'draft-7',
       legacyHeaders: false,
-      keyGenerator: (req: Request) => req.user?.id || req.ip,
+      keyGenerator: (req: Request) => String(req.user?.id || req.ip || 'anon'),
       message: jsonMessage('RATE_LIMITED', 'Analysis rate limit reached. Try again later.'),
     }),
     payments: rateLimit({
@@ -118,7 +118,7 @@ export function buildRateLimiters(disabled = false) {
       limit: 8,
       standardHeaders: 'draft-7',
       legacyHeaders: false,
-      keyGenerator: (req: Request) => req.user?.id || req.ip,
+      keyGenerator: (req: Request) => String(req.user?.id || req.ip || 'anon'),
       message: jsonMessage('RATE_LIMITED', 'Too many payment submissions. Try again later.'),
     }),
     general: rateLimit({

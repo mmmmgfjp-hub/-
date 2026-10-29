@@ -47,7 +47,6 @@ export function serializePayment(row: PaymentRow) {
     reviewedAt: row.reviewed_at,
     reviewNote: row.review_note,
     subscriptionId: row.subscription_id,
-    priceDays: settingsPriceDays,
   };
 }
 
