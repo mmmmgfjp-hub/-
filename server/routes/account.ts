@@ -138,13 +138,11 @@ export function accountRouter(ctx: RouteContext): express.Router {
         meta: { from: user.countryCode, to: code, selfReported: true },
         ip: req.clientIp ?? null,
       });
-      const fresh = db.prepare('SELECT * FROM users WHERE id = ?').get(user.id) as Parameters<
-        typeof serializeUser
-      >[1];
-      const updated = { ...user, countryCode: code, countryUpdatedAt: now };
+      const freshRow = findUserById(db, user.id);
+      const updated = freshRow ? toAuthUser(freshRow) : { ...user, countryCode: code };
       res.json({
         ok: true,
-        user: serializeUser(db, { ...fresh, country_code: code, country_updated_at: now }),
+        user: serializeUser(db, updated),
         country: getCountry(code),
         countryRules: countryRules(updated),
       });
