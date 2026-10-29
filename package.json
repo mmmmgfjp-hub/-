@@ -1,0 +1,46 @@
+{
+  "name": "-",
+  "version": "1.0.0",
+  "description": "تحليل تقني وفني مدعوم ب الذكاء الاصطناعي  بتحليل قوي جدا",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmmmgfjp-hub/-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mmmmgfjp-hub/-/issues"
+  },
+  "homepage": "https://github.com/mmmmgfjp-hub/-#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.22.3",
+    "express-rate-limit": "^8.7.2",
+    "i18n-iso-countries": "^7.14.0",
+    "jsonwebtoken": "^9.0.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
