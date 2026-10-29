@@ -87,9 +87,8 @@ export function accountRouter(ctx: RouteContext): express.Router {
           ip: req.clientIp ?? null,
         });
       }
-      const fresh = db.prepare('SELECT * FROM users WHERE id = ?').get(user.id) as Parameters<
-        typeof serializeUser
-      >[1];
+      const freshRow = findUserById(db, user.id);
+      const fresh = freshRow ? toAuthUser(freshRow) : user;
       res.json({ user: serializeUser(db, fresh) });
     }),
   );
