@@ -1,6 +1,6 @@
 import express from 'express';
 import { z } from 'zod';
-import { requireAuth, type AuthUser } from '../auth';
+import { findUserById, requireAuth, toAuthUser, type AuthUser } from '../auth';
 import { audit, asyncHandler, HttpError } from '../http';
 import { isValidCountryCode, normalizeCountryCode, getCountry } from '../services/countries';
 import { activeSubscription, computeEntitlement, publicEntitlement } from '../services/entitlements';
